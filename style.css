@@ -13,6 +13,7 @@
     font-size: 2rem;
     text-align: center;
     margin: 2rem auto;
+    opacity: 0.8;
 }
 
 .label-text {
@@ -24,5 +25,20 @@
     font-size: 0.75em;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.prev-date, .next-date {
+    font-size: 1.5em;
+    font-weight: 100;
+    opacity: 0.1;
+}
+
+.prev-date:hover, .next-date:hover {
+    opacity: 0.25;
+}
+
+.prev-date:active, .next-date:active {
+    opacity: 0.5;
 }
