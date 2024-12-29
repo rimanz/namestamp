@@ -8,4 +8,26 @@ const nextBtn = document.querySelector('.next-date');
 
 // Initialize Elements:
 const date = new Date();
-currentDate.textContent = date.toLocaleDateString().replaceAll('/', '-');
+printDate();
+
+// Event Listeners:
+prevBtn.addEventListener('click', goPreviousDate);
+nextBtn.addEventListener('click', goNextDate);
+
+// Function declarations:
+function printDate() {
+  let dd = date.getDate();
+  let mm = date.getMonth() + 1;
+  let yyyy = date.getFullYear();
+  currentDate.textContent = `${dd}-${mm}-${yyyy}`;
+}
+
+function goPreviousDate() {
+  date.setDate(date.getDate() - 1);
+  printDate();
+}
+
+function goNextDate() {
+  date.setDate(date.getDate() + 1);
+  printDate();
+}
