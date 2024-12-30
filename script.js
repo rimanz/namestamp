@@ -16,8 +16,8 @@ nextBtn.addEventListener('click', goNextDate);
 
 // Function declarations:
 function printDate() {
-  let dd = date.getDate();
-  let mm = date.getMonth() + 1;
+  let dd = date.getDate().toString().padStart(2, '0');
+  let mm = (date.getMonth() + 1).toString().padStart(2, '0');
   let yyyy = date.getFullYear();
   currentDate.textContent = `${dd}-${mm}-${yyyy}`;
 }
