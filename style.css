@@ -9,6 +9,11 @@
     font-size: 18px;
 }
 
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .label {
     font-size: 2rem;
     text-align: center;
