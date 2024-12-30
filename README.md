@@ -1,7 +1,7 @@
 # namestamp
 
 ## Overview
-NameStamp is a web project designed to print nameplates with a date. This tool allows users to easily create and print customized nameplates with the current (or specific) date.
+NameStamp is a simple web app designed to accommodate printing nameplates with a date. This beginner's trivial project is intended to get done a very specific job at my current work.
 
 ## Features
 - Create and print nameplates with custom labels and dates.
