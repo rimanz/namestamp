@@ -41,10 +41,10 @@ function goNextDate() {
 }
 
 function calculateFontSize(text) {
-    const availableWidth = labelText.offsetWidth;
-    const fontSize = Math.round(availableWidth / text.length);
-    console.log(availableWidth, fontSize);
-    return fontSize;
+  const availableWidth = labelText.offsetWidth;
+  const fontSize = Math.round(availableWidth / text.length);
+  console.log(availableWidth, fontSize);
+  return fontSize;
 }
 
 function changeLabelFontSize() {
