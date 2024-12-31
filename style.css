@@ -10,14 +10,14 @@
 }
 
 main {
-    width: 96%;
+    width: 92%;
     margin: 0 auto;
 }
 
 .label {
     font-size: 2rem;
     text-align: center;
-    margin: 3rem auto;
+    margin: 4rem auto;
     opacity: 0.8;
 }
 

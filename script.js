@@ -41,8 +41,8 @@ function goNextDate() {
 }
 
 function calculateFontSize(text) {
-  const maxFontSize = 120;
-  const minFontSize = 40  ;
+  const maxFontSize = 72;
+  const minFontSize = 48;
   const availableWidth = labelText.offsetWidth;
   const fontSize = Math.round(availableWidth / text.length);
 
