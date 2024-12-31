@@ -41,10 +41,18 @@ function goNextDate() {
 }
 
 function calculateFontSize(text) {
+  const maxFontSize = 120;
+  const minFontSize = 40  ;
   const availableWidth = labelText.offsetWidth;
   const fontSize = Math.round(availableWidth / text.length);
-  console.log(availableWidth, fontSize);
-  return fontSize;
+
+  if (fontSize < minFontSize) {
+    return minFontSize;
+  } else if (fontSize > maxFontSize) {
+    return maxFontSize;
+  } else {
+    return fontSize;
+  }
 }
 
 function changeLabelFontSize() {
