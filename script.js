@@ -5,6 +5,7 @@ const labelDate = document.querySelector('.label-date');
 const currentDate = document.querySelector('.curr-date');
 const prevBtn = document.querySelector('.prev-date');
 const nextBtn = document.querySelector('.next-date');
+const printBtn = document.querySelector('.print');
 
 // Initialize Elements:
 const date = new Date();
@@ -14,6 +15,7 @@ changeLabelFontSize();
 // Event Listeners:
 prevBtn.addEventListener('click', goPreviousDate);
 nextBtn.addEventListener('click', goNextDate);
+printBtn.addEventListener('click', () => window.print());
 labelText.addEventListener('focusout', changeLabelFontSize);
 labelText.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
