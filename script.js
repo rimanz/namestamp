@@ -5,6 +5,7 @@ const labelDate = document.querySelector('.label-date');
 const currentDate = document.querySelector('.curr-date');
 const prevBtn = document.querySelector('.prev-date');
 const nextBtn = document.querySelector('.next-date');
+const pasteBtn = document.querySelector('.paste');
 const printBtn = document.querySelector('.print');
 
 // Initialize Elements:
@@ -15,6 +16,7 @@ changeLabelFontSize();
 // Event Listeners:
 prevBtn.addEventListener('click', goPreviousDate);
 nextBtn.addEventListener('click', goNextDate);
+pasteBtn.addEventListener('click', pasteText);
 printBtn.addEventListener('click', () => window.print());
 labelText.addEventListener('focusout', changeLabelFontSize);
 labelText.addEventListener('keypress', (e) => {
@@ -59,4 +61,10 @@ function calculateFontSize(text) {
 
 function changeLabelFontSize() {
   label.style.fontSize = calculateFontSize(labelText.textContent) + 'px';
+}
+
+function pasteText() {
+  navigator.clipboard.readText().then((text) => {
+    labelText.textContent = text;
+  });
 }
