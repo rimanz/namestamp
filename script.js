@@ -67,4 +67,5 @@ function pasteText() {
   navigator.clipboard.readText().then((text) => {
     labelText.textContent = text;
   });
+  changeLabelFontSize();
 }
