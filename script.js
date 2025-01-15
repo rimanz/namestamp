@@ -45,8 +45,8 @@ function goNextDate() {
 }
 
 function calculateFontSize(text) {
-  const maxFontSize = 72;
-  const minFontSize = 48;
+  const maxFontSize = 80;
+  const minFontSize = 40;
   const availableWidth = labelText.offsetWidth;
   const fontSize = Math.round(availableWidth / text.length);
 
@@ -59,13 +59,13 @@ function calculateFontSize(text) {
   }
 }
 
-function changeLabelFontSize() {
-  label.style.fontSize = calculateFontSize(labelText.textContent) + 'px';
+function changeLabelFontSize(text=labelText.textContent) {
+  label.style.fontSize = calculateFontSize(text) + 'px';
 }
 
 function pasteText() {
   navigator.clipboard.readText().then((text) => {
     labelText.textContent = text;
+    changeLabelFontSize(text);  
   });
-  changeLabelFontSize();
 }
